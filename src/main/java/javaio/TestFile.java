@@ -8,8 +8,22 @@ import java.util.regex.Pattern;
 public class TestFile {
 
 	public static void main(String[] args) {
-		//listFile();
+		System.out.println("1. test simple file.list");
+		listFile();
+		
+		System.out.println("2. test file.list with filter");
 		listFileByName("\\..*"); //list all files start with '.'
+		
+		System.out.println("3.1 practice file.list");
+		SortedDirList sdl = new SortedDirList(".\\src\\main\\java\\javaio");
+		for (String dirItem : sdl.list()) {
+			System.out.println(dirItem);
+		}
+		System.out.println("3.2 practice file.list with filter");
+		for (String dirItem : sdl.list(".*\\.java")) {
+			System.out.println(dirItem);
+		}
+		
 	}
 	
 	
