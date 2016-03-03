@@ -23,7 +23,9 @@ public class TestFile {
 		for (String dirItem : sdl.list(".*\\.java")) {
 			System.out.println(dirItem);
 		}
-		
+		System.out.println("4 practice print dir tree");
+		WalkDir wd = new WalkDir();
+		wd.walk();
 	}
 	
 	
